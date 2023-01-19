@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.type.descriptor.jdbc.LobTypeMappings;
 
 @Entity
 @Table(name = "PRODUCT_IMAGE_DATA")
@@ -19,6 +20,6 @@ public class ProductDataImage {
     private String productName;
     private String imageType;
     @Lob
-    @Column(name = "imagedata", length = 1000)
+    @Column(name = "imagedata", length = 100000)
     private byte[] imageData;
 }
